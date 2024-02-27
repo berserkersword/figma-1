@@ -5,13 +5,13 @@ import OutLineButton from './outLineButton'
 const Section = ({ img, title, text, url, btnText, reverse }: { img: StaticImageData, title: string, text: string, url: string, btnText: string, reverse: boolean }) => {
     return (
         <div className='flex justify-center mt-4'>
-            <div className={`wrapper container flex justify-center ${reverse ? 'flex-row-reverse' : ''}`}>
+            <div className={`wrapper container flex sm:flex-col md:flex-row lg:flex-row justify-center ${reverse ? 'md:flex-row-reverse lg:flex-row-reverse' : ''}`}>
 
-                <div className={`w-1/2 `}>
+                <div className={`lg:w-1/2 md:w-1/2  `}>
                     <Image src={img} alt={`${img}`} width={600} height={600} />
                 </div>
 
-                <div className={`w-1/2 p-4 flex flex-col justify-center`}>
+                <div className={`lg:w-1/2 md:w-1/2 sm:w-full p-4 flex flex-col justify-center`}>
                     <h1 className='text-gray-900 text-4xl font-bold my-4'>
                         {title}
                     </h1>

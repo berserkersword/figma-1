@@ -10,6 +10,7 @@ import { motion } from 'framer-motion'
 import OutLineButton from "@/components/outLineButton";
 import Footer from "@/components/footer";
 import Section from "@/components/Section";
+import BigCard from "@/components/bigCard";
 
 export default function Home() {
 
@@ -20,11 +21,9 @@ export default function Home() {
 
       {/*       Main section         */}
       <main className="flex justify-center items-center mt-8 p-3 min-h-[100vh]">
-        <div className="wrap container flex">
-
-
+        <div className="wrap container flex md:flex-row lg:flex-row sm:flex-col">
           {/*                         main info                      */}
-          <div className="w-1/2 info p-10 gap-10">
+          <div className="md:w-1/2 info p-10 gap-10">
             <motion.h1
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -33,7 +32,7 @@ export default function Home() {
               initial='hidden'
               animate='visibile'
 
-              className="text-6xl font-black m-6 mt-10">
+              className="lg:text-6xl sm:text-4xl font-black m-6 mt-10">
               Virtual healthcare<br />
               for you
             </motion.h1>
@@ -46,7 +45,7 @@ export default function Home() {
               animate='visibile'
               transition={{ delay: 0.25, duration: 0.5 }}
 
-              className="text-3xl m-6 font-extralight text-gray-500">
+              className="lg:text-3xl sm:text-xl m-6 font-extralight text-gray-500">
               Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
             </motion.h1>
             <motion.div
@@ -57,12 +56,11 @@ export default function Home() {
               initial='hidden'
               animate='visibile'
               transition={{ delay: 0.25, duration: 0.5 }}
+              className="flex sm:justify-center md:justify-start lg:justify-start"
             >
               <Button text="Consult today" />
             </motion.div>
           </div>
-
-
           {/*                         main info                      */}
           <motion.div
             variants={{
@@ -73,7 +71,7 @@ export default function Home() {
             animate='visibile'
             transition={{ delay: 0.25, duration: 0.75 }}
 
-            className="w-1/2 illustration">
+            className="md:w-1/2 illustration">
             <Image src={Illustration} alt={'asdd'} />
 
           </motion.div>
@@ -116,7 +114,7 @@ export default function Home() {
             We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health
           </motion.h1>
 
-          <div className="cards grid grid-cols-3 container px-16 gap-4 mt-[2rem]">
+          <div className="cards grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 container px-16 gap-4 mt-[2rem]">
             {serviceData.map(
               card => {
                 return (
@@ -148,6 +146,8 @@ export default function Home() {
           })
         }
       </div>
+
+      <BigCard />
 
 
       <Footer />

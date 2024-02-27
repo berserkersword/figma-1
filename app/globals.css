@@ -6,19 +6,6 @@
 /* ??? import fonts ??? */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 @layer utilities {
   html{
     color-theme:light;
@@ -34,4 +21,10 @@
 }
 .main-button:hover{
   background: radial-gradient(#458FF6 0%,#45f6f6 100%);
+}
+.big-card{
+  transition: all 0.4s ease;
+}
+.big-card:hover{
+  transform: translate(-5px,-5px);
 }
