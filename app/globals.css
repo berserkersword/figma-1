@@ -1,6 +1,10 @@
+/*      ??? tailwind configs ??? */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ??? import fonts ??? */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -8,26 +12,26 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
+  html{
+    color-theme:light;
+  }
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.main-button{
+  background: radial-gradient(#458FF6 100%,#45f6f6 0%);
+  transition: all 1s;
+}
+.main-button:hover{
+  background: radial-gradient(#458FF6 0%,#45f6f6 100%);
 }
