@@ -149,7 +149,7 @@ export default function Home() {
 
       <BigCard />
 
-
+      
       <Footer />
     </main>
   );
