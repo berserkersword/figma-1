@@ -49,6 +49,7 @@ export const serviceData = [
 export const sectionsData = [
     {
         img: img1,
+        key:6,
         title: 'Leading healthcare provider',
         text: 'Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it`s not just work. We take pride in the solutions we deliver',
         url: '/',
@@ -57,6 +58,7 @@ export const sectionsData = [
     },
     {
         img: img2,
+        key:7,
         title: 'Download our mobile apps',
         text: 'Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely',
         url: '/',

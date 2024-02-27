@@ -139,10 +139,17 @@ export default function Home() {
       <div className="mt-10">
         {
           sectionsData.map(item => {
-            return <Section img={item.img} title={item.title} text={item.text} url={item.url} reverse={item.reverse} btnText={item.btnText} />
+            return <Section
+              img={item.img}
+              key={item.key}
+              title={item.title}
+              text={item.text}
+              url={item.url} reverse={item.reverse} btnText={item.btnText} />
           })
         }
       </div>
+
+
       <Footer />
     </main>
   );
