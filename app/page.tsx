@@ -121,6 +121,7 @@ export default function Home() {
               card => {
                 return (
                   <Card
+                    key={card.key}
                     title={card.title}
                     text={card.text.slice(0, 150) + ' ...'}
                     img={card.img}
