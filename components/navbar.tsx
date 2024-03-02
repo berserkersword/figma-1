@@ -23,6 +23,7 @@ const navbar = () => {
                         className='w-[40px] h-[40px] flex bg-[#458FF6] rounded-[50%] text-center justify-center items-center text-xl font-mulish font-black text-[#fff]'
                     >
                         T
+
                     </motion.div>
                     <motion.span
                         variants={{
