@@ -6,7 +6,7 @@ import Hamburger from 'hamburger-react';
 
 const navbar = () => {
 
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
 
     return (
         <nav className="bg-white border-gray-200 w-full mt-6">
